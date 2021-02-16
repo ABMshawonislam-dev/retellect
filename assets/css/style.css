@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+
+
+
+/*======================================================
+        navbar css start
+========================================================*/
+.navbar {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    margin: 0!important;
+    padding: 0px 0 9px!important;
+    z-index: 111;
+    transition: all ease .4s;
+    -webkit-transition: all ease .4s;
+    -moz-transition: all ease .4s;
+    -o-transition: all ease .4s;
+}
+
+.sticky {
+    background: #F5F5F5;
+    box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+    -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+    -moz-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+    -o-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+}
+
+.sticky.navbar {
+    padding: 0px 0 10px;
+    position: fixed;
+    animation: sticky .7s;
+    -webkit-animation: sticky .7s;
+    -moz-animation: sticky .7s;
+    -o-animation: sticky .7s;
+    z-index: 1000;
+}
+
+@keyframes sticky {
+    from {
+        top: -50px;
+    }
+
+    to {
+        top: 0;
+    }
+}
+nav ul li a {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #999999;
+    text-transform: capitalize;
+    position: relative;
+    z-index: 9;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+nav ul li{
+  transition: 0.3s ease;
+  border-top: 4px solid transparent;
+  padding: 30px 0;
+}
+nav ul li.active,
+nav ul li:hover {
+  border-top: 4px solid #f05456;
+    color: #f05456!important;
+}
+
+nav ul li.active a,
+nav ul li:hover a{
+    color: #f05456!important;
+}
+
+nav ul li.dropdown ul li{
+    padding: 0;
+
+}
+
+nav ul li.dropdown ul li:hover{
+    border-top: 4px solid transparent;
+}
+
+nav ul li{
+        margin: 0 10px;
+}
+
+nav ul li a {
+    color: #999999;
+}
+
+
+/*======================================================
+        navbar css end
+========================================================*/
+
+
+/*======================================================
+        footer css start
+========================================================*/
+footer{
+    background: #f7ea66;
+
+}
+
+footer p.copy-right{
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #666666;
+    font-weight: 400;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 24px;
+}
+
+
+/*======================================================
+        footer css end
+========================================================*/
+
