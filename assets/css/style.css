@@ -112,6 +112,131 @@ nav ul li a {
         navbar css end
 ========================================================*/
 
+/*======================================================
+        breadcrumb css start
+========================================================*/
+
+.bread-inner{
+     padding: 90px 0 70px;
+}
+.otherpage ul.breadcrumb {
+    padding: 20px 0 3px;
+    display: inline-flex;
+    list-style: none;
+    background-color: transparent;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+}
+
+.bread-inner h2 {
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: 'Abril Fatface', cursive;
+    line-height: 24px;
+    text-transform: capitalize;
+}
+
+.otherpage ul.breadcrumb li a p {
+    color: #ffffff;
+    padding: 0 10px;
+}
+
+.otherpage ul.breadcrumb li {
+    color: #ffffff;
+}
+
+.otherpage ul.breadcrumb li:nth-child(2){
+    margin-right: 10px;
+}
+
+
+
+.otherpage ul.breadcrumb li p {
+    display: inline;
+    font-size: 18px;
+    width: 650px;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 24px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+/*======================================================
+        breadcrumb css end
+========================================================*/
+
+/*======================================================
+        blog css start
+========================================================*/
+#blog-part{
+    margin-top: 100px;
+}
+
+#blog-part .wp-post-image{
+    width: 100%;
+}
+
+#blog-part .blog-details{
+    position: relative;
+    border: 1px solid red;
+    border-top: 0;
+    padding: 0 20px;
+    padding-bottom: 20px;
+}
+
+#blog-part .blog-details img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+#blog-part .blog-details span{
+    position: absolute;;
+    top: 0;
+    left: 110px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size:14px;
+    color: #999999;
+}
+
+#blog-part .blog-details .date{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size:14px;
+    color: #999999;
+}
+#blog-part .blog-details .tips{
+
+    margin-top: -30px;
+}
+
+#blog-part .blog-details .tips a{
+    font-family: 'Ubuntu', sans-serif;
+    font-size:20px;
+    color: #222222;
+    text-decoration: none;
+}
+
+#blog-part .blog-details a{
+    font-family: 'Ubuntu', sans-serif;
+    font-size:16px;
+    color: #222222;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+#blog-part .blog-details a i{
+    margin-left: 10px;
+}
+/*======================================================
+        blog css end
+========================================================*/
 
 /*======================================================
         footer css start

@@ -1,6 +1,7 @@
 <?php
 
 function retellect_script_enqueue(){
+	wp_enqueue_style( "fontawsome", get_template_directory_uri() . "/assets/css/all.min.css", array(),"1.0.0", "all" );
 	wp_enqueue_style( "style", get_template_directory_uri() . "/assets/css/style.css", array(),"1.0.0", "all" );
 	wp_enqueue_style( "googlefonts",'https://fonts.googleapis.com/css?family=Abril+Fatface|Ubuntu:300,400,500,600,700', "all" );
 	wp_enqueue_style( "bootstrap-css", get_template_directory_uri() . "/assets/css/bootstrap.min.css", array(),"1.0.0", "all" );
@@ -25,6 +26,7 @@ function retellect_custom_logo_setup() {
  "flex-width"  => true,
  );
  add_theme_support( "custom-logo", $defaults );
+ add_theme_support( 'post-thumbnails' ); 
 }
 add_action( "after_setup_theme", "retellect_custom_logo_setup" );
 

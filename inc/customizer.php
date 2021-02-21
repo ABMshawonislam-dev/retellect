@@ -29,4 +29,21 @@ $wp_customize->add_control( 'retellect_footer_text', array(
 	'type' => "text",
 ) );
 
+ $wp_customize->add_section( 'retellect_breadcrumb_section', array(
+  'title' => __( 'Breadcrumb' ),
+  'description' => __( 'Add Bradcrumb background here' ),
+  'priority' => 140,
+) );
+
+ $wp_customize->add_setting( 'retellect_breadcrumb_setting', array(
+  'default' => '#2d3e50',
+  'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'breadcrumb_bg', array(
+	'label'      => __( 'Breadcrumb Background', 'retellect' ),
+	'section'    => 'retellect_breadcrumb_section',
+	'settings'   => 'retellect_breadcrumb_setting',
+) ) );
+
 }
