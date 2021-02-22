@@ -1,12 +1,25 @@
+<?php if ( is_active_sidebar( "blog-sidebar" ) ) { 
+  $blog_col = "col-lg-8";
+  $blog_item_col = "col-lg-6";
+  $blog_bottom_pagi_col = "col-lg-8";
+}else{
+  $blog_col = "col-lg-12"; 
+  $blog_item_col = "col-lg-4";
+  $blog_bottom_pagi_col = "col-lg-12";
+}
+  ?>
+
 <?php get_header(); ?>
 <?php include get_template_directory() . "/template-parts/breadcrumb.php"; ?>
     <section id="blog-part">
     	   <div class="container">
        	<div class="row">
-       	<?php if (have_posts() ) : ?>
+       	<div class="<?php echo $blog_col ?>">
+       		<div class="row display-flex">
+       			<?php if (have_posts() ) : ?>
                     <?php while (have_posts() ) : the_post(); ?>
                 
-                  <div class="col-lg-4 col-sm-6 mb-4" <?php post_class();?>>
+                  <div class="<?php echo $blog_item_col ?> col-sm-6 mb-4" <?php post_class();?>>
                       <div class="blog-item blog-gride-item">
                         <div class="blog-img">
                           <?php
@@ -38,6 +51,23 @@
               <?php else : ?>
                   <p><?php esc_html_e( "Sorry, no posts matched your criteria.","eventoo" ); ?></p>
               <?php endif; ?>
+
+              <div class="pagination">
+              	<?php echo paginate_links(array(
+              			'prev_text'          => __('<i class="fas fa-angle-left"></i>'),
+						'next_text'          => __('<i class="fas fa-angle-right"></i>'),
+              	));?>
+              </div>
+       		</div>
+       	</div>
+
+              	<?php if ( is_active_sidebar( 'blog-sidebar' ) ) : ?>
+              		 <div class="col-lg-4">
+    					<?php dynamic_sidebar( 'blog-sidebar' ); ?>
+      				</div>
+				<?php endif; ?>
+            </div>
+
        </div>
        </div>
     </section>

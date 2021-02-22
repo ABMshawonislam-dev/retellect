@@ -7,10 +7,10 @@
                         <ul class="breadcrumb">
                             <li>
                                 <a href="<?php echo get_home_url(); ?>">
-                                    <p>home<i class="fa fa-angle-right"></i></p>
+                                    <p>home</p>
                                 </a>
                             </li>
-                            <li>></li>
+                            <li><i class="fa fa-angle-right"></i></li>
                             <li>
                                 <p>Blog Details</p>
                             </li>

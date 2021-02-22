@@ -5,10 +5,11 @@
 
 ul,ol{
     list-style: none;
+    padding: 0 !important;
 }
 
 a{
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 h1,h2,h3,h4,h5,h6,p{
@@ -175,13 +176,18 @@ nav ul li a {
     margin-top: 100px;
 }
 
+#blog-part .item{
+    width: 50%;
+    float: left;
+}
+
 #blog-part .wp-post-image{
     width: 100%;
 }
 
 #blog-part .blog-details{
     position: relative;
-    border: 1px solid red;
+    border: 1px solid #dddddd;
     border-top: 0;
     padding: 0 20px;
     padding-bottom: 20px;
@@ -214,6 +220,7 @@ nav ul li a {
 #blog-part .blog-details .tips{
 
     margin-top: -30px;
+   
 }
 
 #blog-part .blog-details .tips a{
@@ -234,6 +241,124 @@ nav ul li a {
 #blog-part .blog-details a i{
     margin-left: 10px;
 }
+
+#blog-part .pagination{
+    justify-content: center;
+}
+
+#blog-part .pagination a{
+    border: 1px solid #dddddd;
+    display: inline-block;
+    color: #999999;
+    text-decoration: none;
+    margin:0 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 35px;
+}
+
+#blog-part .pagination span{
+    border: 1px solid #dddddd;
+    display: inline-block;
+    color: #444444;
+    text-decoration: none;
+    margin:0 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 35px;
+
+}
+
+#blog-part .searchform .screen-reader-text{
+    display: none;
+}
+
+#blog-part .searchform{
+    position: relative;
+}
+
+#blog-part .searchform #s{
+    width: 100%;
+}
+
+#blog-part .searchform input[type="submit"]{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 16px;
+    padding: 5px 20px;
+    background: #f05456;
+    border: 1px solid #f05456;
+    color: #fff;
+}
+
+#blog-part .widget-content .widget-title{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 24px;
+}
+
+#blog-part .widget-content ul li{
+    position: relative;
+}
+
+#blog-part .widget-content ul li a,
+#blog-part .widget-content ul li span{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    color: #444444;
+    transition: .4s;   
+}
+
+#blog-part .widget-content ul li span{
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    right: 0;
+}
+
+#blog-part .widget-content ul li:hover a,
+#blog-part .widget-content ul li:hover span{
+    color: #f05456; 
+    padding-left: 10px;
+}
+
+#blog-part .widget-content .tagcloud a{
+    display: inline-block;
+    color: #444444;
+    border:1px solid #444444;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px !important;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#blog-part .widget-content .tagcloud a:hover{
+    border-color: #f05456;
+    color:#f05456;
+}
+
+#blog-part table{
+    width: 100%;
+    text-align: center;
+}
+
+#blog-part table th,
+#blog-part table td{
+    border:1px solid #444444;
+    color: #444444;
+    padding: 5px 0;
+}
+
+
+#blog-part table td a{
+    color: #444444;
+}
 /*======================================================
         blog css end
 ========================================================*/
@@ -243,7 +368,13 @@ nav ul li a {
 ========================================================*/
 footer{
     background: #f7ea66;
+    padding-top: 50px;
+    margin-top: 100px;
 
+}
+
+footer .logo{
+    text-align: center;
 }
 
 footer p.copy-right{
@@ -254,10 +385,10 @@ footer p.copy-right{
     font-weight: 400;
     font-family: 'Ubuntu', sans-serif;
     line-height: 24px;
+    margin-bottom: 0;
 }
 
 
 /*======================================================
         footer css end
 ========================================================*/
-

@@ -30,7 +30,36 @@ function retellect_custom_logo_setup() {
 }
 add_action( "after_setup_theme", "retellect_custom_logo_setup" );
 
+function retellect_blog_sidebar() {
+    register_sidebar(
+        array (
+            'name' => __( 'Blog Sidebar', 'retellect' ),
+            'id' => 'blog-sidebar',
+            'description' => __( 'Blog Sidebar', 'retellect' ),
+            'before_widget' => '<div class="widget-content">',
+            'after_widget' => "</div>",
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>',
+        )
+    );
+}
+add_action( 'widgets_init', 'retellect_blog_sidebar' );
 
+function retellect_categories_postcount_filter ($variable) {
+   $variable = str_replace('(', '<span class="post_count"> ', $variable);
+   $variable = str_replace(')', ' </span>', $variable);
+   return $variable;
+}
+add_filter('wp_list_categories','retellect_categories_postcount_filter');
+
+
+function retellect_wpfic_archives_post_count_filter( $variable ) {
+	$variable = str_replace('(', '<span class="post_count"> ', $variable);
+	$variable = str_replace(')', ' </span>', $variable);
+	return $variable;
+}
+
+add_filter('get_archives_link', 'retellect_wpfic_archives_post_count_filter');
 
 require get_template_directory() . "/inc/walker.php";
 require get_template_directory() . "/inc/customizer.php";
