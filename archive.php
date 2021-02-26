@@ -35,7 +35,7 @@
 							global $post;
 							$author_id = $post->post_author;
 							$author_id = get_the_author_meta( 'ID' );?>
-                        	<img class="author" src="<?php echo esc_url( get_avatar_url( $author_id ) ); ?>">
+                        	<img src="<?php echo esc_url( get_avatar_url( $author_id ) ); ?>">
                         	<span>Posted By:<?php echo get_the_author_meta( 'nicename', $author_id );?></span>
 							
 							 
