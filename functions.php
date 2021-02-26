@@ -6,7 +6,10 @@ function retellect_script_enqueue(){
 	wp_enqueue_style( "googlefonts",'https://fonts.googleapis.com/css?family=Abril+Fatface|Ubuntu:300,400,500,600,700', "all" );
 	wp_enqueue_style( "bootstrap-css", get_template_directory_uri() . "/assets/css/bootstrap.min.css", array(),"1.0.0", "all" );
 	wp_enqueue_script( "bootstrap-js", get_template_directory_uri() . "/assets/js/bootstrap.bundle.min.js", array("jquery"),"1.0.0",true);
-	
+	wp_enqueue_script( "masonry-js", get_template_directory_uri() . "/assets/js/masonry.pkgd.min.js", array("jquery"),"1.0.0",true);
+
+	wp_enqueue_script( "main-js", get_template_directory_uri() . "/assets/js/script.js", array("jquery"),"1.0.0",true);
+
 }
 
 add_action( "wp_enqueue_scripts","retellect_script_enqueue");

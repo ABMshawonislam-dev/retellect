@@ -185,9 +185,12 @@ nav ul li a {
     width: 100%;
 }
 
+#blog-part .grid-item{
+    margin-bottom: 30px;
+}
+
 #blog-part .blog-details{
     position: relative;
-    border: 1px solid #dddddd;
     border-top: 0;
     padding: 0 20px;
     padding-bottom: 20px;
